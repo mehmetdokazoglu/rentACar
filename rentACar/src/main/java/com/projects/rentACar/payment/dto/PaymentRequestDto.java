@@ -13,15 +13,12 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class PaymentRequestDto {
 
-    @NotNull(message = "Lutfen kart sahibinin adini ve soyadini giriniz")
     @NotBlank(message = "Lutfen kart sahibinin adini ve soyadini giriniz")
     private String cardHolderName;
 
-    @NotNull(message = "Lutfen kart numaranizi giriniz")
     @NotBlank(message = "Lutfen kart numaranizi giriniz")
     private String cardNumber;
 
-    @NotNull(message = "Lutfen cvv kodunu giriniz")
     @NotBlank(message = "Lutfen cvv kodunu giriniz")
     private String cvvCode;
 

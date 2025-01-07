@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_package = "com.example.paymentconfirmation";
+option java_outer_classname = "PaymentServiceProto";
+
+message PaymentRequest {
+  string card_holder_name = 1;
+  string card_number = 2;
+  string cvv_code = 3;
+  string expiration_date = 4;
+}
+
+message PaymentResponse {
+  string message = 1;
+  bool success = 2;
+}
+
+service PaymentService {
+  rpc ProcessPayment (PaymentRequest) returns (PaymentResponse);
+}
